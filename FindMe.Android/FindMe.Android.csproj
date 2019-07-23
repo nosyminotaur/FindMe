@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -70,6 +73,26 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\AmaticSC\AmaticSC-Bold.ttf" />
     <AndroidAsset Include="Assets\AmaticSC\AmaticSC-Regular.ttf" />
+    <AndroidAsset Include="Assets\OpenSans\OpenSans-Light.ttf" />
+    <AndroidAsset Include="Assets\OpenSans\OpenSans-Regular.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Black.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-BlackItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Bold.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-BoldItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-ExtraBold.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-ExtraBoldItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-ExtraLight.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-ExtraLightItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Italic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Light.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-LightItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Medium.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-MediumItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Regular.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-SemiBold.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-SemiBoldItalic.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-Thin.ttf" />
+    <AndroidAsset Include="Assets\Raleway\Raleway-ThinItalic.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -92,20 +115,54 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\OpenSans\" />
-    <Folder Include="Assets\Raleway\" />
-    <Folder Include="Resources\drawable-hdpi\" />
-    <Folder Include="Resources\drawable-xhdpi\" />
-    <Folder Include="Resources\drawable-xxhdpi\" />
-    <Folder Include="Resources\drawable-xxxhdpi\" />
-    <Folder Include="Resources\drawable\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\FindMe\FindMe.csproj">
       <Project>{2601C13D-7A9B-4243-B948-5A35315F32DC}</Project>
       <Name>FindMe</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\aboutme.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\dribbble_2x.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\EveningNight.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Image1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Magic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\main_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\main_page_header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\signin_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\signin_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\signup_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\signup_bg_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\signup_bg_prev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\signup_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\wonderoflife.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

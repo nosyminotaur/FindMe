@@ -4,6 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             BackgroundImageSource="main_background.jpg"
+             NavigationPage.HasNavigationBar="False"
              x:Class="FindMe.MainPage">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -20,19 +22,19 @@
                 <!--This row contains the welcome text-->
                 <RowDefinition Height="2*" />
                 <!--This row contains the two buttons, login and signup-->
-                <RowDefinition Height="120" />
+                <RowDefinition Height="*" />
                 <!--Empty row to force sign buttons upward-->
-                <RowDefinition Height="300" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <StackLayout Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="Center" Padding="10">
-                <Label x:Name="HeaderLabel" Margin="0,30,0,30" FontFamily="Sniglet-Regular.ttf#Sniglet-Regular" FontSize="36" HorizontalTextAlignment="Center">
+                <Label x:Name="HeaderLabel" Margin="0,30,0,30" FontFamily="{StaticResource AmaticSCBold}" FontSize="36" HorizontalTextAlignment="Center">
                     <Label.Text>
                         FindMe
                     </Label.Text>
                 </Label>
-                <Label x:Name="CaptionLabel" FontFamily="Sniglet-Regular.ttf#Sniglet-Regular" FontSize="20" HorizontalTextAlignment="Center">
+                <Label x:Name="CaptionLabel" FontFamily="{StaticResource AmaticSCBold}" FontSize="20" HorizontalTextAlignment="Center">
                     <Label.Text>
-                        Meet people you were destined to meet.
+                        Find people you were destined to meet.
                     </Label.Text>
                 </Label>
             </StackLayout>

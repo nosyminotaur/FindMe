@@ -7,7 +7,7 @@ namespace FindMe.Services
 {
     class AuthService : IAuthService
     {
-        private readonly string BASE_URL = "10.0.2.2:5000";
+        private readonly string BASE_URL = "http://10.0.2.2:5000";
         private readonly string jsonMediaType = "application/json";
         private readonly HttpClient httpClient;
         public AuthService()

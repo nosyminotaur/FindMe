@@ -4,6 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="signup_bg.jpg"
              x:Class="FindMe.Views.SignupPage">
     <ContentPage.Content>
         <Grid>
