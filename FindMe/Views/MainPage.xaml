@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FindMe.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LoginSignupButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="HeightRequest" Value="70" />
+                <Setter Property="WidthRequest" Value="150" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid x:Name="MainGrid" Opacity="0">
+            <Grid.RowDefinitions>
+                <!--This row contains the welcome text-->
+                <RowDefinition Height="2*" />
+                <!--This row contains the two buttons, login and signup-->
+                <RowDefinition Height="120" />
+                <!--Empty row to force sign buttons upward-->
+                <RowDefinition Height="300" />
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="Center" Padding="10">
+                <Label x:Name="HeaderLabel" Margin="0,30,0,30" FontFamily="Sniglet-Regular.ttf#Sniglet-Regular" FontSize="36" HorizontalTextAlignment="Center">
+                    <Label.Text>
+                        FindMe
+                    </Label.Text>
+                </Label>
+                <Label x:Name="CaptionLabel" FontFamily="Sniglet-Regular.ttf#Sniglet-Regular" FontSize="20" HorizontalTextAlignment="Center">
+                    <Label.Text>
+                        Meet people you were destined to meet.
+                    </Label.Text>
+                </Label>
+            </StackLayout>
+            <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,40">
+                <Button Text="SIGN IN"  Clicked="SignInButton_Clicked" BackgroundColor="{StaticResource PrimaryColor}" FontFamily="{StaticResource AmaticSCRegular}" Padding="20,20,20,20" FontSize="36" BorderWidth="0" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Button Text="SIGN UP"  Clicked="SignUpButton_Clicked" BackgroundColor="{StaticResource SecondaryColor}" FontFamily="{StaticResource AmaticSCRegular}" Padding="20,20,20,20" FontSize="36" BorderWidth="0" HorizontalOptions="Center" VerticalOptions="Center" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundImageSource="signin_bg.jpg"
+             xmlns:vm="clr-namespace:FindMe.ViewModels"
+             x:Class="FindMe.Views.LoginPage">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <!--Mountain wallpaper till here-->
+                <RowDefinition Height="2*" />
+                <!--Changed to double the height.-->
+                <RowDefinition Height="2*" />
+                <!--Holds the Sign In Label and arrow button.-->
+                <RowDefinition Height="2*" />
+                <!--Holds the last stacklayout-->
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Padding="60,0" Grid.Row="1" BackgroundColor="Transparent">
+                <Label Text="Welcome back!" FontSize="48" Margin="0,0,0,40"  TextColor="Coral" FontFamily="{StaticResource AmaticSCBold}" HorizontalTextAlignment="Center"/>
+                <Entry Text="{Binding UserData}" Placeholder="Username/Email" Style="{StaticResource BaseEntryStyle}" />
+                <Entry Placeholder="Password" IsPassword="True" Style="{StaticResource BaseEntryStyle}"/>
+            </StackLayout>
+            <StackLayout Grid.Row="2" Padding="30" Orientation="Horizontal">
+                <Label FontFamily="{StaticResource RalewayBold}"
+                           Text="Sign in"
+                           FontSize="32"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="Center"/>
+                <Button Style="{StaticResource ArrowButton}" Command="{Binding LoginCommand}" />
+            </StackLayout>
+            <StackLayout Grid.Row="3" Padding="30" Orientation="Horizontal">
+                <Label x:Name="SignupLabel" FontSize="Medium" FontFamily="{StaticResource RalewayBold}" Text="Sign up" TextDecorations="Underline" HorizontalOptions="StartAndExpand" />
+                <Label x:Name="ForgotPasswordLabel" FontSize="Medium" FontFamily="{StaticResource RalewayBold}" Text="Forgot Password" TextDecorations="Underline" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FindMe.Views.SignupPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="1.5*" />
+            </Grid.RowDefinitions>
+            <StackLayout Padding="60,0,60,0" Grid.Row="0" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand">
+                <Label Text="Join Us!" FontSize="54" Margin="0,0,0,20"  TextColor="LightCoral" FontFamily="{StaticResource AmaticSCBold}" HorizontalTextAlignment="Center" />
+                <Entry Placeholder="Username" Style="{StaticResource BaseEntryStyle}" />
+                <Entry Placeholder="Password" IsPassword="True" Style="{StaticResource BaseEntryStyle}" />
+                <Entry Placeholder="Confirm Password" IsPassword ="True" Style="{StaticResource BaseEntryStyle}" />
+            </StackLayout>
+            <StackLayout Grid.Row ="2" Padding="30" Orientation="Horizontal">
+                <Button Style="{StaticResource RightButton}" Clicked="AboutMeButton_Clicked" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

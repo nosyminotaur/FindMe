@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FindMe.Views.AboutMe">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Entry" BasedOn="{StaticResource BaseEntryStyle}">
+                <Setter Property="FontFamily" Value="{StaticResource RalewayBold}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <!--So let's see. Full name, city, age >=18, Optional( City, State, Zipcode), Description Box.-->
+        <!--alright, one grid with two rows. First contains a label with some content and some image if required-->
+        <!--Second contains all the fields the user has to fill-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <!--Label/Header-->
+                <RowDefinition Height="Auto" />
+                <!--All other details-->
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <StackLayout Padding="0,40,0,40" Grid.Row="0" HorizontalOptions="Center">
+                <Label x:Name ="Title"
+                     Text="About Me"
+                     FontSize="40"
+                     FontFamily="{StaticResource AmaticSCBold}"
+                     TextColor="Coral" />
+            </StackLayout>
+            <StackLayout Padding="0,20,0,0" Grid.Row="1" HorizontalOptions="Center">
+                <!--We'll add a little hint stating that all fields with * are optional-->
+                <Entry Placeholder="First Name"/>
+                <Entry Placeholder="Middle Name*" />
+                <Entry Placeholder="Last Name" />
+                <Entry Placeholder="City*" />
+                <Entry Placeholder="State*" />
+                <StackLayout Orientation="Horizontal">
+                    <Switch x:Name="AboveEighteenSwitch" IsToggled="False" Toggled="AboveEighteenSwitch_Toggled" />
+                    <Label Text="I'm above 18!" FontFamily="{StaticResource RalewayBold}" VerticalOptions="CenterAndExpand" FontSize="Large" />
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
