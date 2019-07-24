@@ -16,6 +16,8 @@
             <x:String x:Key="RalewayRegular">Raleway/Raleway-Regular.ttf#Raleway-Regular</x:String>
             <x:String x:Key="AmaticSCBold">AmaticSC/AmaticSC-Bold.ttf#AmaticSC-Bold</x:String>
             <x:String x:Key="AmaticSCRegular">AmaticSC/AmaticSC-Regular.ttf#AmaticSC-Regular</x:String>
+            <x:String x:Key="OpenSansRegular">OpenSans/OpenSans-Regular.ttf#OpenSans-Regular</x:String>
+            <x:String x:Key="OpenSansLight">OpenSans/OpenSans-Light.ttf#OpenSans-Light</x:String>
             <Style x:Key="ArrowButton" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}" />
                 <Setter Property="Text" Value="&#x0002192;" />
@@ -31,7 +33,7 @@
                 <Setter Property="PlaceholderColor" Value="Gray" />
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="FontSize" Value="Medium" />
-                <Setter Property="FontFamily" Value="{StaticResource RalewayLight}" />
+                <Setter Property="FontFamily" Value="{StaticResource OpenSansLight}" />
             </Style>
         </ResourceDictionary>
     </Application.Resources>

@@ -22,7 +22,7 @@
                 <Entry Placeholder="Confirm Password" IsPassword ="True" Style="{StaticResource BaseEntryStyle}" />
             </StackLayout>
             <StackLayout Grid.Row ="2" Padding="30" Orientation="Horizontal">
-                <Label Text="Sign Up" FontSize="Large" HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="LightCoral" FontFamily="{StaticResource RalewayBold}"/>
+                <Label Text="Sign Up" FontSize="28" HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="LightCoral" FontFamily="{StaticResource OpenSansLight}"/>
                 <Button Style="{StaticResource ArrowButton}" HorizontalOptions="EndAndExpand" Clicked="AboutMeButton_Clicked" />
             </StackLayout>
         </Grid>
