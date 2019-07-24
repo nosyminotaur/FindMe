@@ -19,13 +19,12 @@
             <Style x:Key="ArrowButton" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="{StaticResource SecondaryColor}" />
                 <Setter Property="Text" Value="&#x0002192;" />
-                <Setter Property="FontSize" Value="32" />
+                <Setter Property="FontSize" Value="36" />
                 <Setter Property="Padding" Value="0,0,0,10" />
                 <Setter Property="BorderWidth" Value="0" />
                 <Setter Property="CornerRadius" Value="30" />
                 <Setter Property="HeightRequest" Value="60" />
                 <Setter Property="WidthRequest" Value="60" />
-                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
                 <Setter Property="VerticalOptions" Value="Center" />
             </Style >
             <Style x:Key="BaseEntryStyle" TargetType="Entry">

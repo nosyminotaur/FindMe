@@ -10,19 +10,20 @@
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="1.5*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="2*" />
             </Grid.RowDefinitions>
-            <StackLayout Padding="60,0,60,0" Grid.Row="0" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand">
-                <Label Text="Join Us!" FontSize="54" Margin="0,0,0,20"  TextColor="LightCoral" FontFamily="{StaticResource AmaticSCBold}" HorizontalTextAlignment="Center" />
+            <StackLayout Padding="60,30,60,0" Grid.Row="0" BackgroundColor="Transparent" VerticalOptions="CenterAndExpand">
+                <Label Text="Join Us!" FontSize="48" Margin="0,0,0,30"  TextColor="LightCoral" FontFamily="{StaticResource AmaticSCBold}" HorizontalTextAlignment="Center" />
                 <Entry Placeholder="Username" Style="{StaticResource BaseEntryStyle}" />
                 <Entry Placeholder="Password" IsPassword="True" Style="{StaticResource BaseEntryStyle}" />
                 <Entry Placeholder="Confirm Password" IsPassword ="True" Style="{StaticResource BaseEntryStyle}" />
             </StackLayout>
             <StackLayout Grid.Row ="2" Padding="30" Orientation="Horizontal">
-                <Button Style="{StaticResource RightButton}" Clicked="AboutMeButton_Clicked" />
+                <Label Text="Sign Up" FontSize="Large" HorizontalOptions="StartAndExpand" VerticalOptions="Center" TextColor="LightCoral" FontFamily="{StaticResource RalewayBold}"/>
+                <Button Style="{StaticResource ArrowButton}" HorizontalOptions="EndAndExpand" Clicked="AboutMeButton_Clicked" />
             </StackLayout>
         </Grid>
     </ContentPage.Content>
