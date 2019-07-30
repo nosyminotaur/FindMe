@@ -5,6 +5,6 @@ namespace FindMe.DAL
 {
     public class AppUser : IdentityUser
     {
-        public List<LoginProvider> LoginProviders;
+        public List<LoginProvider> LoginProviders { get; set; }
     }
 }

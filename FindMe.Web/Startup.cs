@@ -2,7 +2,6 @@ using FindMe.Core.Interfaces;
 using FindMe.Core.Repositories;
 using FindMe.DAL;
 using FindMe.DAL.Context;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -12,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System;
+using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace FindMe.Web
 {
@@ -84,15 +85,9 @@ namespace FindMe.Web
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();
+            app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

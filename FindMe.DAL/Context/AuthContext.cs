@@ -12,9 +12,9 @@ namespace FindMe.DAL.Context
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);
             var LoginTypeToStringConverter = new ValueConverter<List<LoginProvider>, string>(v => JsonConvert.SerializeObject(v), v => JsonConvert.DeserializeObject<List<LoginProvider>>(v));
             builder.Entity<AppUser>().Property(e => e.LoginProviders).HasConversion(LoginTypeToStringConverter);
+            base.OnModelCreating(builder);
         }
     }
 }
