@@ -19,8 +19,4 @@
   <ItemGroup>
     <ProjectReference Include="..\FindMe.Shared\FindMe.Shared.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
 </Project>

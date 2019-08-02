@@ -26,7 +26,8 @@
             <StackLayout Padding="60,0" Grid.Row="1" BackgroundColor="Transparent">
                 <Label Text="Welcome back!" FontSize="32" Margin="0,0,0,40"  TextColor="Coral" FontFamily="{StaticResource AmaticSCBold}" HorizontalTextAlignment="Center"/>
                 <Entry Text="{Binding UserData}" Placeholder="Username/Email" Style="{StaticResource BaseEntryStyle}" />
-                <Entry Placeholder="Password" IsPassword="True" Style="{StaticResource BaseEntryStyle}"/>
+                <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" Style="{StaticResource BaseEntryStyle}"/>
+                <Entry Text="{Binding ErrorMessage}" Margin="0,30,0,0" Style="{StaticResource BaseEntryStyle}" TextColor="PaleVioletRed" />
             </StackLayout>
             <StackLayout Grid.Row="2" Padding="30" Orientation="Horizontal">
                 <Label FontFamily="Raleway/Raleway-Bold.ttf#Raleway-Bold"

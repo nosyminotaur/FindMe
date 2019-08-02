@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using FindMe.Shared.Helpers;
+using System.ComponentModel.DataAnnotations;
 
 namespace FindMe.Shared.Models
 {
@@ -10,11 +11,11 @@ namespace FindMe.Shared.Models
 
         [Required(ErrorMessage = "Username is required")]
         [MinLength(5, ErrorMessage = "Username must be 5 characters long")]
-        //TODO Add regex to control username characters
+        [RegularExpression(AppRegex.UsernameRegex, ErrorMessage = AppRegex.UsernameError)]
         public string username;
 
         [Required(ErrorMessage = "Password is required")]
-        //TODO Add regex
+        [RegularExpression(AppRegex.PasswordRegex, ErrorMessage = "Invalid Password conditions")]
         public string password;
     }
 }
